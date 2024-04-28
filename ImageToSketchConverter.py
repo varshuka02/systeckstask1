@@ -160,12 +160,8 @@ class ImageToSketchConverter:
         elif self.color_filter == "Black and White":
             _, self.sketch_image = cv2.threshold(self.sketch_image, 128, 255, cv2.THRESH_BINARY)
         elif self.color_filter == "Vintage":
-            # Apply vintage effect (example)
             pass
-
-        # Apply other parameters (smoothing, texture intensity, etc.) as needed
-
-        # Update the preview
+            
         self.show_image(self.sketch_image)
         self.save_btn.config(state=tk.NORMAL)
 
